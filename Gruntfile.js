@@ -8,7 +8,7 @@ grunt.initConfig({
 	},
 	uglify: {
 		options: {
-			banner: '/**\n * jQuery DFP v<%= pkg.version %>\n * http://github.com/coop182/jquery.dfp.js\n *\n * Copyright <%= grunt.template.today("yyyy") %> Matt Cooper\n * Released under the MIT license\n */\n'
+			banner: '/**\n * jQuery DFP v<%= pkg.version %>\n * http://github.com/nicedawg/jquery.dfp.js\n *\n * Copyright <%= grunt.template.today("yyyy") %> Matt Cooper\n * Released under the MIT license\n */\n'
 		},
 		build: {
 			src: 'jquery.dfp.js',

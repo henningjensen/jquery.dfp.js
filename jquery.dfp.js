@@ -99,6 +99,7 @@
                 setTargeting: {},
                 setCategoryExclusion: '',
                 setLocation: '',
+                setRequestNonPersonalizedAds: false,
                 enableSingleRequest: true,
                 collapseEmptyDivs: 'original',
                 refreshExisting: true,
@@ -273,6 +274,10 @@
                             pubadsService.setCategoryExclusion(valueTrimmed);
                         }
                     });
+                }
+
+                if (dfpOptions.setRequestNonPersonalizedAds) {
+                  pubadsService.setRequestNonPersonalizedAds(1);
                 }
 
                 if (dfpOptions.collapseEmptyDivs) {

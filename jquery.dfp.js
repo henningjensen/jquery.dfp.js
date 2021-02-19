@@ -1,6 +1,6 @@
 /*!
- * jQuery DFP v2.4.2
- * http://github.com/nicedawg/jquery.dfp.js
+ * jQuery DFP v2.4.3
+ * http://github.com/henningjensen/jquery.dfp.js
  *
  * Copyright 2016 Matt Cooper
  * Released under the MIT license

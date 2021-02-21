@@ -108,7 +108,8 @@
                 setCentering: false,
                 noFetch: false,
                 namespace: undefined,
-                sizeMapping: {}
+                sizeMapping: {},
+                enableLazyLoad: false
             };
 
             if (typeof options.setUrlTargeting === 'undefined' || options.setUrlTargeting) {
@@ -246,7 +247,14 @@
 
                 var pubadsService = googletag.pubads();
 
-                if (dfpOptions.enableSingleRequest) {
+                // if lazy loading is enabled, this overrides the single request setting
+                if (dfpOptions.enableLazyLoad) {
+                    if (dfpOptions.enableLazyLoad === true) {
+                        pubadsService.enableLazyLoad();
+                    } else if (typeof dfpOptions.enableLazyLoad == 'object') {
+                        pubadsService.enableLazyLoad(dfpOptions.enableLazyLoad);
+                    }
+                } else if (dfpOptions.enableSingleRequest) {
                     pubadsService.enableSingleRequest();
                 }
 

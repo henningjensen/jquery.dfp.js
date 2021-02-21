@@ -1,18 +1,44 @@
 {
-    "name": "jquery.dfp",
-    "version": "2.4.2",
-    "devDependencies": {
-        "grunt": "~0.4",
-        "grunt-contrib-jasmine": "^1.1.0",
-        "grunt-contrib-jshint": "^0.11.1",
-        "grunt-contrib-uglify": "^0.8.0"
-    },
-    "scripts": {
-        "test": "grunt travis --verbose"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/nicedawg/jquery.dfp.js"
-    },
-    "main": "jquery.dfp.js"
+  "name": "jquery.dfp",
+  "version": "2.4.4",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-contrib-jasmine": "^1.1.0",
+    "grunt-contrib-jshint": "^0.11.1",
+    "grunt-contrib-uglify": "^0.8.0"
+  },
+  "scripts": {
+    "test": "grunt travis --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/henningjensen/jquery.dfp.js"
+  },
+  "main": "jquery.dfp.js",
+  "author": {
+    "name": "Matt Cooper",
+    "email": "matt@matthewcooper.net",
+    "url": "http://matthewcooper.net"
+  },
+  "contributors": [
+    "Matt Cooper <matt@matthewcooper.net> (https://github.com/coop182)",
+    "David Heidrich <me@bowlingx.com> (https://github.com/BowlingX)",
+    "Chris Chang <github@crccheck.com> (https://github.com/crccheck)",
+    "Søren Gregersen (https://github.com/soreng)",
+    "Laurence Morin-Daoust <laurence.morin.daoust@gmail.com> (https://github.com/larryaubstore)",
+    "Brady Somerville (https://github.com/nicedawg)",
+    "Henning Jensen <henning.jensen@gmail.com> (https://github.com/henningjensen)",
+    "Johannes Hansen <johannesh1980@gmail.com> (https://github.com/JohannesEH)",
+    "Matt Hinchliffe (https://github.com/i-like-robots)",
+    "Chuck Carpenter <chuck@shipshape.io> (https://github.com/chuckcarpenter)",
+    "Eher <alexandre@eher.com.br> (https://github.com/EHER)",
+    "Asa Baylus <asa@baylus.com> (https://github.com/asabaylus)",
+    "billsykes (https://github.com/billsykes)",
+    "Ivan Novak <ivan@novakws.com> (https://github.com/ivannovak)",
+    "J (https://github.com/Joostvanderlaan)",
+    "Jamie Shen (https://github.com/jmeshen)",
+    "Oleg German (https://github.com/ogerman)",
+    "Tom Kaminski <ttkaminski@gmail.com> (https://github.com/ttk)"
+  ]
 }

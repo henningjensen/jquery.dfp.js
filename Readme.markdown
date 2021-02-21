@@ -216,6 +216,10 @@ Available Options
         <td>Enables/disables centering of ads.</td>
     </tr>
     <tr>
+        <td>enableLazyLoad</td>
+        <td>Enables/disables lazy loading of ads. Set to true if you want to use DFP defaults. Otherwise pass an object with the same configuration variables stated [here](https://developers.google.com/publisher-tag/reference#googletag.PubAdsService_enableLazyLoad). Note that this setting overrides enableSingleRequest to false. Lazy loading is not enabled by default.</td>
+    </tr>
+    <tr>
         <td>afterEachAdLoaded</td>
         <td>This is a call back function, see below for more information.</td>
     </tr>

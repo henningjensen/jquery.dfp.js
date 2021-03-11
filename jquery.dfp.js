@@ -321,7 +321,7 @@
 
                     rendered++;
 
-                    var $adUnit = $('#' + event.slot.getSlotId().getDomId());
+                    var $adUnit = $('#' + CSS.escape(event.slot.getSlotId().getDomId()));
 
                     var display = event.isEmpty ? 'none' : 'block';
 

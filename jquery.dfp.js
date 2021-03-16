@@ -185,18 +185,36 @@
                             slotName = '/' + dfpID + '/' + adUnitName;
                         }
 
+                       
                         // Create the ad - out of page or normal
                         if ($adUnit.data('outofpage')) {
-                            googleAdUnit = googletag.defineOutOfPageSlot(slotName, adUnitID);
+                            var outofpageFormat = $adUnit.data('outofpage-format');
+                            if (outofpageFormat) {
+                                var formatValue;
+                                try {
+                                    if (outofpageFormat.startsWith("googletag.enums.OutOfPageFormat."))
+                                        formatValue = eval(outofpageFormat);
+                                } catch(e) {
+                                    console.error("Invalid out of page format - must be one of the values in the enum: googletag.enums.OutOfPageFormat");
+                                }
+                                if (formatValue === undefined) {
+                                    formatValue = outofpageFormat;
+                                }
+                                googleAdUnit = googletag.defineOutOfPageSlot(slotName, formatValue);
+                            } else {
+                                googleAdUnit = googletag.defineOutOfPageSlot(slotName, adUnitID);
+                            }
                         } else {
                             googleAdUnit = googletag.defineSlot(slotName, dimensions, adUnitID);
                             if ($adUnit.data('companion')) {
                                 googleAdUnit = googleAdUnit.addService(googletag.companionAds());
                             }
                         }
-
-                        googleAdUnit = googleAdUnit.addService(googletag.pubads());
-
+                    
+                        // out of page slots defined for mobile will not return a 
+                        // valid slot on desktop, skip when null
+                        if (googleAdUnit)
+                            googleAdUnit = googleAdUnit.addService(googletag.pubads());
                     }
 
                     // Sets custom targeting for just THIS ad unit if it has been specified
@@ -410,6 +428,7 @@
                     googletag.cmd.push(function () { googletag.pubads().refresh([$adUnitData]); });
 
                 } else {
+
                     googletag.cmd.push(function () { googletag.display($adUnit.attr('id')); });
                 }
 
